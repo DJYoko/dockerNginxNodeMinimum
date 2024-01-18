@@ -3,9 +3,13 @@ services:
   nginx-app:
     container_name: workspace_container
     hostname: workspace_container
+    env_file:
+      - .env
     build:
       context: .
       dockerfile: ./docker/Dockerfile
+      args:
+        NODE_VERSION: ${NODE_VERSION}
     ports:
       - '${APP_PORT}:80'
     volumes:
