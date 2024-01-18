@@ -1,0 +1,1 @@
+docker exec -it workspace_container bash
