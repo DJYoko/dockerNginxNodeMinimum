@@ -15,6 +15,7 @@ services:
       - node_container
 
   node_container:
+    container_name: node_container
     image: node:latest
     working_dir: /usr/share/nginx/html
     volumes:
